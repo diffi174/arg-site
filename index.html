@@ -79,20 +79,21 @@
     <h1>Введите пароль</h1>
     <input type="text" id="password" placeholder="введите пароль" />
     <button id="confirm">подтвердить</button>
+
     <div class="result" id="result">
       верный пароль, доступ разрешён
       <div class="next" id="next" style="margin-top:12px; display:none;">
         следующий шаг: <a href="#" id="nextLink">ссылка будет здесь</a>
       </div>
     </div>
+
     <div class="error" id="error">
       пароль неправильный, отказано в доступе
-    </div>
     </div>
   </div>
 
   <script>
-    const correctPassword = "истина"; // 
+    const correctPassword = "истина";
 
     const input = document.getElementById("password");
     const button = document.getElementById("confirm");
@@ -101,9 +102,9 @@
     const next = document.getElementById("next");
     const nextLink = document.getElementById("nextLink");
 
-    // 
+    // Заготовка для следующего шага ARG
     nextLink.textContent = "перейти дальше";
-    nextLink.href = "#"; //
+    nextLink.href = "#"; // сюда позже вставишь реальную ссылку
 
     function checkPassword() {
       if (input.value.trim().toLowerCase() === correctPassword) {
