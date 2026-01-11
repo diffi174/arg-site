@@ -77,7 +77,7 @@
 <body>
   <div class="container">
     <h1>Введите пароль</h1>
-    <input type="text" id="password" placeholder="пароль из слов" />
+    <input type="text" id="password" placeholder="введите пароль" />
     <button id="confirm">подтвердить</button>
     <div class="result" id="result">
       верный пароль, доступ разрешён
@@ -92,7 +92,7 @@
   </div>
 
   <script>
-    const correctPassword = "секретный пароль"; // ← тут меняешь пароль
+    const correctPassword = "ИСТИНА"; // 
 
     const input = document.getElementById("password");
     const button = document.getElementById("confirm");
@@ -101,9 +101,9 @@
     const next = document.getElementById("next");
     const nextLink = document.getElementById("nextLink");
 
-    // Заготовка для следующего шага ARG
+    // 
     nextLink.textContent = "перейти дальше";
-    nextLink.href = "#"; // сюда позже вставишь реальную ссылку
+    nextLink.href = "#"; //
 
     function checkPassword() {
       if (input.value.trim().toLowerCase() === correctPassword) {
